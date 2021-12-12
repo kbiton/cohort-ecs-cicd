@@ -1,0 +1,48 @@
+ "taskSets": [
+        {
+            "networkConfiguration": {
+                "awsvpcConfiguration": {
+                    "subnets": [
+                        "subnet-05a6379dea433f761", 
+                        "subnet-0ebbdbb5e0cd89866"
+                    ], 
+                    "securityGroups": [
+                        "sg-099a192e41cea0686"
+                    ], 
+                    "assignPublicIp": "DISABLED"
+                }
+            }, 
+            "launchType": "FARGATE", 
+            "loadBalancers": [
+                {
+                    "containerName": "nginx-sample", 
+                    "targetGroupArn": "arn:aws:elasticloadbalancing:us-east-2:541961652903:targetgroup/BlueG-EcsBl-198YGSGCHVMRK/39b617f237ec5908", 
+                    "containerPort": 80
+                }
+            ], 
+            "clusterArn": "arn:aws:ecs:us-east-2:541961652903:cluster/BlueGreenPipelineStack-EcsBlueGreenClusterecsClusterDC1F033A-Nkv2cfRHOyS4", 
+            "updatedAt": 1639322205.437, 
+            "serviceArn": "arn:aws:ecs:us-east-2:541961652903:service/nginx-sample", 
+            "id": "ecs-svc/0753645206421204893", 
+            "createdAt": 1639322099.76, 
+            "stabilityStatusAt": 1639322139.489, 
+            "scale": {
+                "unit": "PERCENT", 
+                "value": 100.0
+            }, 
+            "externalId": "d-6UJQIL8ID", 
+            "runningCount": 3, 
+            "status": "PRIMARY", 
+            "serviceRegistries": [], 
+            "pendingCount": 0, 
+            "tags": [], 
+            "stabilityStatus": "STEADY_STATE", 
+            "platformVersion": "1.4.0", 
+            "computedDesiredCount": 3, 
+            "taskSetArn": "arn:aws:ecs:us-east-2:541961652903:task-set/BlueGreenPipelineStack-EcsBlueGreenClusterecsClusterDC1F033A-Nkv2cfRHOyS4/nginx-sample/ecs-svc/0753645206421204893", 
+            "startedBy": "CodeDeploy", 
+            "taskDefinition": "arn:aws:ecs:us-east-2:541961652903:task-definition/nginx-sample:6"
+        }
+    ], 
+    "failures": []
+}
